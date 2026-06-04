@@ -7,7 +7,6 @@ public class Concatenation{
          int[] array=new int[n];
          for(int i=0;i<n;i++){
             array[i]=sc.nextInt();
-
          }
          int[] sum=new int[2*n];
          for(int i=0;i<n;i++){
