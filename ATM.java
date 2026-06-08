@@ -8,6 +8,7 @@ public class ATM{
             balance=balance-num;
             System.out.println("AMOUNT IS SUCCESSFULLY WITHDRAWED,TAKE YOUR AMMOUNT.....");
         }
+            
             else if(opt==2){
                 System.out.println("ENTER AMOUNT TO DEPOSIT");
                 int num=sc.nextInt();
