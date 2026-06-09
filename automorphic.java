@@ -9,6 +9,7 @@ public class automorphic{
          result=result*10+b;
         }
         if(result==num){
+            
             System.out.println("AUTOMORPHIC NUMBER");
         }
         else{
