@@ -5,6 +5,7 @@ public class binary{
     String a=Integer.toBinaryString(num);
     System.out.println(a);
     }
+    
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
         int num=sc.nextInt();
