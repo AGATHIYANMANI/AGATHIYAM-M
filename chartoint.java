@@ -10,6 +10,5 @@ public class chartoint {
         char a=sc.next().charAt(0);
         chartoint cc=new chartoint();
         cc.cal(a);
-
     }
 }
