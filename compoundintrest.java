@@ -4,7 +4,6 @@ public class compoundintrest {
         double cc=(P* Math.pow(1+(R/100),y))-P;
         System.out.println("Compound intrest:"+cc);
     }
-    
 public static void main(String [] args){
     Scanner sc=new Scanner(System.in);
     System.out.println("Enter principle ammount:");
