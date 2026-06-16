@@ -10,7 +10,6 @@ public class evil{
             if(nuum.charAt(i)=='1'){
                 count+=1;
             }
-         
            
         }
          if(count%2==0){
