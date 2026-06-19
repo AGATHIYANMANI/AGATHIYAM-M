@@ -10,7 +10,6 @@ public class fibonnaci {
         else{
             return cal(num-1)+cal(num-2);
         }
-
     }
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
