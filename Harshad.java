@@ -1,7 +1,6 @@
 import java.util.*;
 public class Harshad {
     void find(int num){
-       
         int total=0;
         while(num>0){
             int a=num%10;
