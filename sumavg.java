@@ -5,6 +5,7 @@ public class sumavg {
     for(int i=1;i<=n;i++){
          i=sc.nextInt();
         total+=i;
+      
     }
     int average=total/n;
     System.out.println("Totai:"+total);
