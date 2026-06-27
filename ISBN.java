@@ -17,7 +17,6 @@ public class ISBN{
         else{
             System.out.println(org+"is not ISBN number");
         }
-
     }
     public static void main(String []args){
         Scanner sc=new Scanner(System.in);
