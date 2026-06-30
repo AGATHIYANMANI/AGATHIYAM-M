@@ -5,7 +5,6 @@ public class bigtosmall{
     char character =sc.next().charAt(0);
     int number=((int)character+32);
     char result=(char)number;
-
 System.out.println("The small of "+character+" is "+result);
     }
 }
