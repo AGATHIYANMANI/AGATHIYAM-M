@@ -1,6 +1,5 @@
 import java.io.Console;
 public class bigtosmall3 {
-    
     public static void main(String [] args){
     Console cs=System.console();
     char character =cs.readLine().charAt(0);
