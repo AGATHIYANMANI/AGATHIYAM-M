@@ -3,7 +3,6 @@ public class pat {
     public static void main(String[] args) {
         int rows = 4;
         int number = 1;
-
         // Outer loop for rows
         for (int i = 1; i <= rows; i++) {
             // Inner loop for columns
