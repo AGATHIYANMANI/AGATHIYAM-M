@@ -8,7 +8,6 @@ return;
 
         }
         
-        
         }
         System.out.println("prime number");
     }
