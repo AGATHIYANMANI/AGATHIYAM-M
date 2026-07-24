@@ -7,7 +7,6 @@ public class vaccum {
             System.out.println("already clean");
         }
     }
-    
     public static void main (String [] args){
         int step=1;
         vaccum vc=new vaccum();
