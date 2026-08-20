@@ -1,31 +1,46 @@
-import java.io.Console;
+import java.io.*;
 
 public class count3 {
-     public static void main(String [] args){
-       Console cs=System.console();
-        System.out.printf("\nEnter length of an array");
-        int n=Integer.parseInt(cs.readLine());
-        System.out.printf("\nEnter value to count:");
-        char k=cs.readLine().charAt(0);
-        char sentence[]=new char[n];
-        System.out.printf("\nEnter value one by one");
-        for(int i=0;i<=n-1;i++){
-            sentence[i]=cs.readLine().charAt(0);
+    public static void main(String[] args) {
+        Console cs = System.console();
+        PrintWriter pw = new PrintWriter(System.out);
+        int n = Integer.parseInt(cs.readLine());
+        int[] N = new int[n];
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i <= n - 1; i++) {
+            N[i] = Integer.parseInt(cs.readLine());
         }
-        int count=0;
-        for(int j=0;j<=n-1;j++){
-            if(k==sentence[j]){
-               count++;
-               continue;
-                            }
-                            
+        for (int j = 0; j <= n - 1; j++) {
+            if (N[j] % 2 == 0) {
+                even++;
+            } else if (N[j] % 2 == 1) {
+                odd++;
+            }
         }
-        
-        if(count!=0){
-            System.out.printf("Total count of %c is %d",k,count);
-        }
-        else{
-            System.out.printf("Element cannot found!");
+        for (int k = 0; k <= n - 1; k++) {
+            if (even > odd) {
+                if (N[k] % 2 == 1) {
+                    pw.write(N[k]);
+                    pw.flush();
+                    return;
+                } else {
+                    pw.write("-1");
+                    pw.flush();
+                    return;
+                }
+
+            } else if (odd > even) {
+                if (N[k] % 2 == 0) {
+                    pw.write(N[k]);
+                    pw.flush();
+                    return;
+                } else {
+                    pw.write("-1");
+                    pw.flush();
+                    return;
+                }
+            }
         }
 
     }
