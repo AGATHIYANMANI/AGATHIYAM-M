@@ -1,38 +1,46 @@
 import java.io.*;
 
 public class count1 {
-       public static void main(String [] args) throws IOException{
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        
-        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
-        System.out.println("Enter length of an array");
-        bw.flush();
-        int n=Integer.parseInt(br.readLine());
-        System.out.println("Enter value to count:");
-        bw.flush();
-        char k=br.readLine().charAt(0);
-        char sentence[]=new char[n];
-        System.out.println("Enter value one by one");
-        bw.flush();
-        for(int i=0;i<=n-1;i++){
-            sentence[i]=br.readLine().charAt(0);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        int[] N = new int[n];
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i <= n - 1; i++) {
+            N[i] = Integer.parseInt(br.readLine());
         }
-        int count=0;
-        for(int j=0;j<=n-1;j++){
-            if(k==sentence[j]){
-               count++;
-               continue;
-                            }
-                            
+        for (int j = 0; j <= n - 1; j++) {
+            if (N[j] % 2 == 0) {
+                even++;
+            } else if (N[j] % 2 == 1) {
+                odd++;
+            }
         }
-        
-        if(count!=0){
-            bw.write("Total count of "+k+" is "+count);
-            bw.flush();
-        }
-        else{
-            bw.write("Element cannot found!");
-            bw.flush();
+        for (int k = 0; k <= n - 1; k++) {
+            if (even > odd) {
+                if (N[k] % 2 == 1) {
+                    bw.write(N[k]);
+                    bw.flush();
+                    return;
+                } else {
+                    bw.write("-1");
+                    bw.flush();
+                    return;
+                }
+
+            } else if (odd > even) {
+                if (N[k] % 2 == 0) {
+                    bw.write(N[k]);
+                    bw.flush();
+                    return;
+                } else {
+                    bw.write("-1");
+                    bw.flush();
+                    return;
+                }
+            }
         }
 
     }
