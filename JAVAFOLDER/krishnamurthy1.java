@@ -1,0 +1,40 @@
+import java.io.*;
+public class krishnamurthy1{
+    int factorial(int num){
+        if(num==0||num==1){
+            return 1;
+        }
+        else{
+            return num*factorial(num-1);
+        }
+    }
+    int cal(int num){
+    int org=num;
+    int sum=0;
+    while(org>0){
+        int temp=org%10;//123..3
+        sum+=factorial(temp);
+        org/=10;//..12
+    
+        }
+        return sum;
+    }
+    
+    public static void main(String [] args) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+        int num=Integer.parseInt(br.readLine());
+        int sec=num;
+        krishnamurthy1 kr=new krishnamurthy1();
+        int result=kr.cal(num);
+        if(result==sec){
+            bw.write("It is krishnamurthy number");
+            bw.flush();
+        }
+        else{
+            bw.write("It is not krishnamurthy number");
+            bw.flush();
+        }
+       
+    }
+}
