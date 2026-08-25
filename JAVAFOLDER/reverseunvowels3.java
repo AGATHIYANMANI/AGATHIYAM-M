@@ -1,0 +1,29 @@
+import java.io.*;
+public class reverseunvowels3 {
+      public static void main(String[] args) throws IOException{
+       Console cs=System.console();
+       PrintWriter pw=new PrintWriter(System.out);
+       String sen=cs.readLine();
+       int l=sen.length()-1;
+       int count=0;
+       int temp=0;
+       String reverse="";
+       for(int i=l;i>=0;i--){
+           if(sen.charAt(i)=='a'|| sen.charAt(i) =='e' ||sen.charAt(i)=='i'||sen.charAt(i)=='o'||sen.charAt(i)=='u'||sen.charAt(i)=='A'|| sen.charAt(i) =='E' ||sen.charAt(i)=='I' ||sen.charAt(i)=='O'||sen.charAt(i)=='U'){
+               count++;
+           }
+           else{
+               reverse+=sen.charAt(i);
+               temp++;
+           }
+       }
+       if(temp>0){
+          pw.write("Reverse:"+reverse);
+          pw.flush();
+       }
+       else{
+           pw.write("-1");
+           pw.flush();
+       }
+    }
+}
