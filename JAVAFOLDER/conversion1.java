@@ -1,0 +1,28 @@
+import java.io.*;
+
+public class conversion1 {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+        String str=br.readLine();
+        int n=str.length()-1;
+        String ff="";
+        for(int i=0;i<=n;i++){
+            char first=str.charAt(i);
+            if(first>=65 && first<=90){
+            int num=(int)first+32;
+            char nn=(char)num;
+            ff+=nn;
+            
+        }
+        else if(first>=97 && first<=122){
+            int num=(int)first-32;
+             char nn=(char)num;
+            ff+=nn;
+        }
+        
+    }
+   bw.write(ff);
+   bw.flush();
+}
+}
