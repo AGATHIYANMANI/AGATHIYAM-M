@@ -1,4 +1,4 @@
-import java.util.*;
+import java.io.*;
 class arraymultiplesquare {
     public int[] sortedSquares(int[] nums) {
         int[] storage=new int[nums.length];
